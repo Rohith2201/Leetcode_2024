@@ -5,7 +5,7 @@ Two strings s and t are isomorphic if the characters in s can be replaced to get
 
 All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
 
-CODE:
+CODE:(JAVA)
 class Solution {
     public boolean isIsomorphic(String s, String t) {
         // Create arrays to store the index of characters in both strings
@@ -37,3 +37,28 @@ class Solution {
         return true;
     }
 }
+
+
+PYTHON:
+class Solution(object):
+    def isIsomorphic(self, s, t):
+        map1=[]
+        map2=[]
+
+        for idx in s:
+            map1.append(s.index(idx))
+        for idx in t:
+            map2.append(t.index(idx))
+
+        if map1 == map2:
+            return True
+        return False
+
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        
+
+
